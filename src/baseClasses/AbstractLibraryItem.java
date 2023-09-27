@@ -1,5 +1,8 @@
 package baseClasses;
 
 public abstract class AbstractLibraryItem {
-    abstract void calculateLateFee();
+
+    public abstract void checkInItem(long id);
+
+    public abstract void checkOutItem();
 }
