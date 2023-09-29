@@ -1,17 +1,12 @@
 package items;
 
-import baseClasses.LibraryItem;
-import interfaces.ReadableItems;
+import baseClasses.ReadableItem;
+import interfaces.ReadableActions;
 
-public class Newspaper extends LibraryItem implements ReadableItems {
-
-    public int totalPages;
-    public int currentPage;
+public class Newspaper extends ReadableItem implements ReadableActions {
 
     public Newspaper(long id, String author, String title, String description, boolean availability, int totalPages, int currentPage) {
-        super(id, author, title, description, availability);
-        this.totalPages = totalPages;
-        this.currentPage = currentPage;
+        super(id, author, title, description, availability, totalPages, currentPage);
     }
 
     @Override

@@ -1,24 +1,12 @@
 package items;
 
-import baseClasses.LibraryItem;
-import interfaces.AudioItems;
+import baseClasses.AudioItem;
+import interfaces.AudioActions;
 
-public class AudioRecording extends LibraryItem implements AudioItems {
-
-    public int duration;
-    public int volume;
-    public static final int MAX_VOLUME = 100;
-    public static final int MIN_VOLUME = 0;
+public class AudioRecording extends AudioItem implements AudioActions {
 
     public AudioRecording(long id, String author, String title, String description, boolean availability, int duration, int volume) {
-        super(id, author, title, description, availability);
-        if (volume < MIN_VOLUME || volume > MAX_VOLUME) {
-            System.out.println("Type volume from 0 to 100");
-        }
-        else {
-            this.volume = volume;
-        }
-        this.duration = duration;
+        super(id, author, title, description, availability, duration, volume);
     }
 
     @Override

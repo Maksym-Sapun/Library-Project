@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface AudioItems {
+public interface AudioActions {
 
     void increaseVolume();
 

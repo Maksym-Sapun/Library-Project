@@ -1,11 +1,7 @@
 package baseClasses;
 
-import interfaces.AudioItems;
-import interfaces.ReadableItems;
-import interfaces.VideoItems;
 
-//TODO interfaces should be implemented on a lower level of abstaction as the cross functional items have redundant behaviour
-public class LibraryItem extends AbstractLibraryItem implements VideoItems, AudioItems, ReadableItems {
+public class LibraryItem {
 
     private long id;
     private String author;
@@ -18,7 +14,7 @@ public class LibraryItem extends AbstractLibraryItem implements VideoItems, Audi
     }
 
     public LibraryItem(long id, String author, String title, String description, boolean availability) {
-        //TODO import uuid to get generic uuid in hex
+
         this.id = id;
         this.author = author;
         this.title = title;
@@ -26,14 +22,12 @@ public class LibraryItem extends AbstractLibraryItem implements VideoItems, Audi
         this.availability = availability;
     }
 
-    @Override
+
     public void checkInItem(long id) {
         if (this.id != id) {
             System.out.println("You are trying to return item with wrong id. \nCurrent item id is: " + id);
             return;
         }
-        //TODO learn about embedded operators that return boolean value (== returns true/false)
-        // can be simplified as (availability)
         if (availability == true) {
             System.out.println("You are trying to return item which already in library");
         } else {
@@ -41,7 +35,7 @@ public class LibraryItem extends AbstractLibraryItem implements VideoItems, Audi
         }
     }
 
-    @Override
+
     public void checkOutItem() {
         if (availability == true) {
             availability = false;
@@ -82,47 +76,47 @@ public class LibraryItem extends AbstractLibraryItem implements VideoItems, Audi
         return description;
     }
 
-    @Override
+
     public void increaseVolume() {
         System.out.println("LibraryItem volume increased");
     }
 
-    @Override
+
     public void decreaseVolume() {
         System.out.println("LibraryItem volume decreased");
     }
 
-    @Override
+
     public void muteVolume() {
         System.out.println("LibraryItem volume muted");
     }
 
-    @Override
+
     public void nextPage() {
         System.out.println("Turning on the next page of Library Item");
     }
 
-    @Override
+
     public void previousPage() {
         System.out.println("Turning on the previous page of Library Item");
     }
 
-    @Override
+
     public void returnOnTheFirst() {
         System.out.println("Returning on the first page of Library Item");
     }
 
-    @Override
+
     public void showCurrentPage() {
         System.out.println("Showing current page of Library Item");
     }
 
-    @Override
+
     public void fastForwardPlus() {
         System.out.println("The Library Item rewound by 10 seconds");
     }
 
-    @Override
+
     public void fastForwardMinus() {
         System.out.println("The Library Item rewound 10 seconds back");
     }

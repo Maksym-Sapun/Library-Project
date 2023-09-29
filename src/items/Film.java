@@ -1,15 +1,12 @@
 package items;
 
-import baseClasses.LibraryItem;
-import interfaces.VideoItems;
+import baseClasses.VideoItem;
+import interfaces.VideoActions;
 
-public class Film extends LibraryItem implements VideoItems {
-
-    public int duration;
+public class Film extends VideoItem implements VideoActions {
 
     public Film(long id, String author, String title, String description, boolean availability, int duration) {
-        super(id, author, title, description, availability);
-        this.duration = duration;
+        super(id, author, title, description, availability, duration);
     }
 
     @Override

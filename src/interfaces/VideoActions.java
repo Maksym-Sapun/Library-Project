@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface VideoItems {
+public interface VideoActions {
 
     void fastForwardPlus();
 
