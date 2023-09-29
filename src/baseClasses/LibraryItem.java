@@ -93,6 +93,11 @@ public class LibraryItem extends AbstractLibraryItem implements VideoItems, Audi
     }
 
     @Override
+    public void muteVolume() {
+        System.out.println("LibraryItem volume muted");
+    }
+
+    @Override
     public void nextPage() {
         System.out.println("Turning on the next page of Library Item");
     }

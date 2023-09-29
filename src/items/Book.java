@@ -10,6 +10,7 @@ public class Book extends LibraryItem implements ReadableItems {
 
     public Book(long id, String author, String title, String description, boolean availability, int totalPages, int currentPage) {
         super(id, author, title, description, availability);
+
         this.totalPages = totalPages;
         this.currentPage = currentPage;
     }

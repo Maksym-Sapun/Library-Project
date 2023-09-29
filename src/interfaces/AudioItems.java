@@ -2,7 +2,11 @@ package interfaces;
 
 public interface AudioItems {
 
-    public void increaseVolume();
+    void increaseVolume();
 
-    public void decreaseVolume();
+    void decreaseVolume();
+
+    void muteVolume();
+
+
 }

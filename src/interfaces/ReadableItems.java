@@ -2,11 +2,11 @@ package interfaces;
 
 public interface ReadableItems {
 
-    public void nextPage();
+    void nextPage();
 
-    public void previousPage();
+    void previousPage();
 
-    public void returnOnTheFirst();
+    void returnOnTheFirst();
 
-    public void showCurrentPage();
+    void showCurrentPage();
 }
